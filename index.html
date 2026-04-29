@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>James Cornell Math Tutoring</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: white;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      padding: 3rem 0;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero img {
+      width: 300px;
+      border-radius: 12px;
+    }
+
+    .btn {
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    .primary {
+      background: #1e3a8a;
+      color: white;
+    }
+
+    .section {
+      margin-top: 3rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .rate {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #1e3a8a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>James Cornell Math Tutoring</h1>
+  <a href="#contact" class="btn primary">Contact Me</a>
+</header>
+
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-text">
+      <h2>Math, Explained the Way Students Understand It.</h2>
+      <p>Personalized math tutoring for middle school, high school, and college students.</p>
+
+      <p>
+        I’m James Cornell, a rising junior at the University of Texas at Austin and an undergraduate Teaching Assistant for Calculus.  
+        I’ve been tutoring students since 2020, helping them improve grades, build confidence, and truly understand math.
+      </p>
+
+      <a href="#contact" class="btn primary">Get Started</a>
+    </div>
+
+    <img src="james.jpg" alt="James Cornell">
+  </div>
+
+  <!-- ABOUT / SUBJECTS -->
+  <div class="section grid">
+    <div class="card">
+      <h3>About James</h3>
+      <p>
+        I started tutoring in the NYC area in 2020 and have worked with students at every level, from foundational math to advanced calculus.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Subjects</h3>
+      <ul>
+        <li>Middle School Math</li>
+        <li>Algebra I & II</li>
+        <li>Geometry</li>
+        <li>Pre-Calculus</li>
+        <li>College Calculus</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Why Choose James?</h3>
+      <ul>
+        <li>Teaching Assistant at UT Austin</li>
+        <li>Clear, simple explanations</li>
+        <li>Personalized sessions</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOCATION -->
+  <div class="section card">
+    <h3>Local & Online Tutoring</h3>
+    <p>
+      Based in Texas — serving Southlake, Grapevine, Colleyville, Keller, and surrounding DFW area.  
+      Also available for online tutoring.
+    </p>
+  </div>
+
+  <!-- RATE -->
+  <div class="section card">
+    <h3>Rates</h3>
+    <div class="rate">$45</div>
+    <p>per hour</p>
+  </div>
+
+  <!-- CONTACT -->
+  <div id="contact" class="section card">
+    <h3>Contact</h3>
+    <p>Fill this out and I’ll get back to you:</p>
+
+    <form action="<form action="https://formspree.io/f/xbdqnkwr" method="POST">
+      <input type="text" name="name" placeholder="Name" required><br><br>
+      <input type="email" name="email" placeholder="Email" required><br><br>
+      <textarea name="message" placeholder="Message" required></textarea><br><br>
+      <button type="submit" class="btn primary">Send</button>
+    </form>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Patnik Creative
+</footer>
+
+</body>
+</html>
