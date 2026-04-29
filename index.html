@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>James Cornell Math Tutoring</title>
 
 <style>
@@ -12,144 +12,189 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #f6f8fb;
-  color: #14213d;
+  color: #0b1f44;
 }
 
-/* HEADER */
 header {
   background: white;
-  padding: 12px 24px;
-  border-bottom: 1px solid #e2e8f0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  border-bottom: 1px solid #dce3ec;
+  padding: 18px 24px 14px;
+  text-align: center;
+  position: relative;
 }
 
 .logo {
-  max-height: 85px;
+  height: 155px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.header-btn {
+  position: absolute;
+  right: 28px;
+  top: 36px;
 }
 
 .btn {
   background: #123c8c;
   color: white;
-  padding: 10px 16px;
-  border-radius: 6px;
+  padding: 11px 18px;
+  border-radius: 7px;
   text-decoration: none;
   border: none;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 15px;
 }
 
-/* CONTAINER */
 .container {
-  max-width: 1000px;
+  max-width: 1080px;
   margin: auto;
-  padding: 26px 20px;
+  padding: 28px 22px;
 }
 
-/* HERO */
 .hero {
   display: grid;
-  grid-template-columns: 1.6fr 1fr;
-  gap: 24px;
+  grid-template-columns: 1.5fr 0.9fr;
+  gap: 32px;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
-.hero h2 {
-  font-size: 32px;
-  margin: 0 0 10px;
+.hero h1 {
+  font-size: 42px;
+  line-height: 1.05;
+  margin: 0 0 14px;
 }
 
 .hero p {
-  margin: 0 0 10px;
-  font-size: 15px;
+  font-size: 17px;
+  margin: 0 0 12px;
 }
 
 .hero img {
   width: 100%;
-  max-width: 260px;
-  border-radius: 10px;
+  max-width: 310px;
+  border-radius: 12px;
+  justify-self: end;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
 }
 
-/* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  margin-bottom: 16px;
+  gap: 16px;
+  margin-bottom: 18px;
 }
 
 .two-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin-bottom: 16px;
+  gap: 16px;
+  margin-bottom: 18px;
 }
 
-/* CARDS */
 .card {
   background: white;
   border: 1px solid #dce3ec;
-  border-radius: 10px;
-  padding: 14px;
+  border-radius: 12px;
+  padding: 20px;
 }
 
 .card h3 {
-  margin: 0 0 6px;
-  font-size: 15px;
+  margin: 0 0 10px;
+  font-size: 19px;
 }
 
-/* RATE */
+.card p {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+
+ul {
+  margin: 0;
+  padding-left: 22px;
+  font-size: 16px;
+}
+
 .rate-box {
-  text-align: center;
   background: #fffaf2;
+  text-align: center;
+  border-color: #eadfcf;
 }
 
 .rate {
-  font-size: 48px;
-  font-weight: bold;
+  font-size: 68px;
+  font-weight: 800;
   color: #123c8c;
-  margin: 4px 0 0;
+  line-height: 1;
 }
 
 .rate-sub {
-  font-size: 12px;
-  letter-spacing: 3px;
+  font-size: 14px;
+  letter-spacing: 4px;
+  font-weight: bold;
+  margin: 8px 0 12px;
 }
 
-/* FORM */
 form {
   display: grid;
-  gap: 8px;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }
 
 input, textarea, select {
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #cbd5e1;
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+}
+
+textarea, select, form button {
+  grid-column: span 2;
 }
 
 textarea {
-  min-height: 80px;
+  min-height: 95px;
 }
 
-/* FOOTER */
 footer {
   background: #0b1f44;
   color: white;
   text-align: center;
-  padding: 12px;
-  font-size: 13px;
+  padding: 14px;
+  font-size: 14px;
 }
 
-/* MOBILE */
-@media (max-width: 800px) {
+@media (max-width: 850px) {
+  .logo {
+    height: 120px;
+  }
+
+  .header-btn {
+    position: static;
+    display: inline-block;
+    margin-top: 10px;
+  }
+
   .hero,
   .grid,
-  .two-grid {
+  .two-grid,
+  form {
     grid-template-columns: 1fr;
+  }
+
+  textarea, select, form button {
+    grid-column: span 1;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero img {
+    justify-self: start;
   }
 }
 </style>
@@ -158,34 +203,29 @@ footer {
 <body>
 
 <header>
-  <img src="jameslogo.jpeg" class="logo">
-  <a href="#contact" class="btn">Contact Me</a>
+  <img src="jameslogo.jpeg" alt="James Cornell Math Tutoring Logo" class="logo" />
+  <a href="#contact" class="btn header-btn">Contact Me</a>
 </header>
 
-<div class="container">
+<main class="container">
 
-<!-- HERO -->
 <section class="hero">
   <div>
-    <h2>Math, Explained the Way Students Understand It.</h2>
-
+    <h1>Math, Explained the Way Students Understand It.</h1>
     <p>Personalized math tutoring for middle school, high school, and college students.</p>
-
     <p>
-      I’m James Cornell, a rising junior at The University of Texas at Austin and an undergraduate Teaching Assistant for Calculus. I’ve been tutoring since 2020 helping students improve grades and truly understand math.
+      I’m James Cornell, a rising junior at The University of Texas at Austin and an undergraduate Teaching Assistant for Calculus. I’ve been tutoring since 2020, helping students improve grades, build confidence, and truly understand math.
     </p>
-
     <a href="#contact" class="btn">Get Started</a>
   </div>
 
-  <img src="james.jpg">
+  <img src="james.jpg" alt="James Cornell" />
 </section>
 
-<!-- CARDS -->
 <section class="grid">
   <div class="card">
     <h3>About James</h3>
-    <p>I started tutoring in the NYC area in 2020 and work with students at all levels.</p>
+    <p>I started tutoring in the NYC area in 2020 and work with students at all levels, from foundational math to advanced calculus.</p>
   </div>
 
   <div class="card">
@@ -205,39 +245,41 @@ footer {
       <li>UT Austin Teaching Assistant</li>
       <li>Clear explanations</li>
       <li>Personalized sessions</li>
+      <li>In-person or online tutoring</li>
     </ul>
   </div>
 </section>
 
-<!-- LOCATION + RATE -->
 <section class="two-grid">
   <div class="card">
     <h3>Local & Online Tutoring</h3>
-    <p>Based in Texas — serving Southlake, Grapevine, Colleyville, Keller, and surrounding DFW area.</p>
+    <p>Based in Texas — serving Southlake, Grapevine, Colleyville, Keller, and the surrounding DFW area.</p>
+    <p>Online tutoring is also available for students outside the area.</p>
   </div>
 
   <div class="card rate-box">
     <h3>Rates</h3>
     <div class="rate">$45</div>
     <div class="rate-sub">PER HOUR</div>
+    <p>High-quality, personalized tutoring with flexible scheduling.</p>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="card">
   <h3>Contact</h3>
+  <p>Fill this out and I’ll get back to you soon.</p>
 
   <form action="https://formspree.io/f/xbdqnkwr" method="POST">
-    <input type="text" name="name" placeholder="Name" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <input type="text" name="grade" placeholder="Student Grade">
-    <input type="text" name="subject" placeholder="Math Subject">
+    <input type="text" name="name" placeholder="Parent/Student Name" required />
+    <input type="email" name="email" placeholder="Email" required />
+    <input type="text" name="grade" placeholder="Student Grade" />
+    <input type="text" name="subject" placeholder="Math Subject" />
 
     <select name="type">
-      <option>In-person or online?</option>
-      <option>In-person</option>
-      <option>Online</option>
-      <option>Either</option>
+      <option value="">In-person or online?</option>
+      <option value="In-person">In-person</option>
+      <option value="Online">Online</option>
+      <option value="Either">Either</option>
     </select>
 
     <textarea name="message" placeholder="Message" required></textarea>
@@ -246,7 +288,7 @@ footer {
   </form>
 </section>
 
-</div>
+</main>
 
 <footer>
   © 2026 Patnik Creative
