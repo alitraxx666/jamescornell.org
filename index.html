@@ -1,290 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>James Cornell Math Tutoring</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>James Cornell Math Tutoring</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<style>
+* { box-sizing: border-box; }
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f6f8fb;
-      color: #14213d;
-      line-height: 1.45;
-    }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f6f8fb;
+  color: #14213d;
+}
 
-    header {
-      background: white;
-      border-bottom: 1px solid #e2e8f0;
-      padding: 16px 32px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+/* HEADER */
+header {
+  background: white;
+  padding: 20px 24px 12px;
+  text-align: center;
+  border-bottom: 1px solid #e2e8f0;
+}
 
-    header h1 {
-      font-size: 22px;
-      margin: 0;
-      color: #0b1f44;
-    }
+/* BIG 3D TITLE */
+.title {
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #0b1f44;
+  text-shadow:
+    1px 1px 0 #cbd5e1,
+    2px 2px 0 #94a3b8,
+    3px 3px 6px rgba(0,0,0,0.15);
+  margin: 0;
+}
 
-    .btn {
-      background: #123c8c;
-      color: white;
-      padding: 11px 18px;
-      border-radius: 7px;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      font-size: 15px;
-      display: inline-block;
-    }
+.subtitle {
+  font-size: 14px;
+  letter-spacing: 4px;
+  margin-top: 4px;
+  color: #64748b;
+}
 
-    .container {
-      max-width: 1050px;
-      margin: 0 auto;
-      padding: 38px 24px;
-    }
+/* CONTAINER */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 28px 20px;
+}
 
-    .hero {
-      display: grid;
-      grid-template-columns: 1.6fr 1fr;
-      gap: 42px;
-      align-items: center;
-      margin-bottom: 34px;
-    }
+/* HERO */
+.hero {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 28px;
+  align-items: center;
+  margin-bottom: 20px;
+}
 
-    .hero h2 {
-      font-size: 42px;
-      line-height: 1.08;
-      margin: 0 0 16px;
-      color: #0b1f44;
-    }
+.hero h2 {
+  font-size: 34px;
+  margin: 0 0 10px;
+}
 
-    .hero p {
-      max-width: 680px;
-      margin: 0 0 14px;
-    }
+.hero p {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
 
-    .hero img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 12px;
-      justify-self: end;
-    }
+.hero img {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 10px;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-      margin-bottom: 26px;
-    }
+/* BUTTON */
+.btn {
+  background: #123c8c;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+}
 
-    .two-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 22px;
-      margin-bottom: 26px;
-    }
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 18px;
+}
 
-    .card {
-      background: white;
-      border: 1px solid #dce3ec;
-      border-radius: 12px;
-      padding: 24px;
-    }
+.two-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 18px;
+}
 
-    .card h3 {
-      margin-top: 0;
-      margin-bottom: 12px;
-      color: #0b1f44;
-    }
+/* CARDS */
+.card {
+  background: white;
+  border: 1px solid #dce3ec;
+  border-radius: 10px;
+  padding: 16px;
+}
 
-    ul {
-      margin: 0;
-      padding-left: 20px;
-    }
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
 
-    .rate-box {
-      text-align: center;
-      background: #fffaf2;
-    }
+/* RATE */
+.rate-box {
+  text-align: center;
+  background: #fffaf2;
+}
 
-    .rate {
-      font-size: 64px;
-      font-weight: bold;
-      color: #123c8c;
-      margin: 8px 0 0;
-    }
+.rate {
+  font-size: 52px;
+  font-weight: bold;
+  color: #123c8c;
+  margin: 6px 0 0;
+}
 
-    .rate-sub {
-      letter-spacing: 4px;
-      font-weight: bold;
-      color: #0b1f44;
-      margin-bottom: 12px;
-    }
+.rate-sub {
+  font-size: 13px;
+  letter-spacing: 3px;
+  margin-bottom: 6px;
+}
 
-    form {
-      display: grid;
-      gap: 12px;
-      max-width: 650px;
-    }
+/* FORM */
+form {
+  display: grid;
+  gap: 10px;
+}
 
-    input, textarea, select {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #cbd5e1;
-      border-radius: 6px;
-      font-size: 15px;
-      font-family: Arial, sans-serif;
-    }
+input, textarea, select {
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+}
 
-    textarea {
-      min-height: 100px;
-      resize: vertical;
-    }
+textarea {
+  min-height: 90px;
+}
 
-    footer {
-      background: #0b1f44;
-      color: white;
-      text-align: center;
-      padding: 18px;
-      font-size: 14px;
-      margin-top: 20px;
-    }
+/* FOOTER */
+footer {
+  background: #0b1f44;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  font-size: 13px;
+}
 
-    @media (max-width: 800px) {
-      .hero,
-      .grid,
-      .two-grid {
-        grid-template-columns: 1fr;
-      }
+/* MOBILE */
+@media (max-width: 800px) {
+  .hero,
+  .grid,
+  .two-grid {
+    grid-template-columns: 1fr;
+  }
 
-      .hero img {
-        justify-self: start;
-      }
-
-      .hero h2 {
-        font-size: 34px;
-      }
-
-      header {
-        padding: 14px 20px;
-      }
-    }
-  </style>
+  .title {
+    font-size: 34px;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>James Cornell Math Tutoring</h1>
-  <a href="#contact" class="btn">Contact Me</a>
+  <h1 class="title">JAMES CORNELL</h1>
+  <div class="subtitle">MATH TUTORING</div>
 </header>
 
-<main class="container">
+<div class="container">
 
-  <section class="hero">
-    <div>
-      <h2>Math, Explained the Way Students Understand It.</h2>
+<section class="hero">
+  <div>
+    <h2>Math, Explained the Way Students Understand It.</h2>
 
-      <p>
-        Personalized math tutoring for middle school, high school, and college students.
-      </p>
+    <p>Personalized math tutoring for middle school, high school, and college students.</p>
 
-      <p>
-        I’m James Cornell, a rising junior at The University of Texas at Austin and an undergraduate Teaching Assistant for Calculus. I’ve been tutoring students since 2020, helping them improve grades, build confidence, and truly understand math.
-      </p>
+    <p>
+      I’m James Cornell, a rising junior at The University of Texas at Austin and an undergraduate Teaching Assistant for Calculus. I’ve been tutoring students since 2020 helping students improve grades and actually understand math.
+    </p>
 
-      <a href="#contact" class="btn">Get Started</a>
-    </div>
+    <a href="#contact" class="btn">Get Started</a>
+  </div>
 
-    <img src="james.jpg" alt="James Cornell Math Tutor" />
-  </section>
+  <img src="james.jpg">
+</section>
 
-  <section class="grid">
-    <div class="card">
-      <h3>About James</h3>
-      <p>
-        I started tutoring in the NYC area in 2020 and have worked with students at every level, from foundational math to advanced calculus.
-      </p>
-    </div>
+<section class="grid">
+  <div class="card">
+    <h3>About James</h3>
+    <p>I started tutoring in the NYC area in 2020 and have worked with students at all levels.</p>
+  </div>
 
-    <div class="card">
-      <h3>Subjects</h3>
-      <ul>
-        <li>Middle School Math</li>
-        <li>Algebra I & II</li>
-        <li>Geometry</li>
-        <li>Pre-Calculus</li>
-        <li>College Calculus</li>
-      </ul>
-    </div>
+  <div class="card">
+    <h3>Subjects</h3>
+    <ul>
+      <li>Middle School Math</li>
+      <li>Algebra I & II</li>
+      <li>Geometry</li>
+      <li>Pre-Calculus</li>
+      <li>College Calculus</li>
+    </ul>
+  </div>
 
-    <div class="card">
-      <h3>Why Choose James?</h3>
-      <ul>
-        <li>Teaching Assistant at UT Austin</li>
-        <li>Clear, simple explanations</li>
-        <li>Personalized sessions</li>
-        <li>In-person or online tutoring</li>
-      </ul>
-    </div>
-  </section>
+  <div class="card">
+    <h3>Why Choose James?</h3>
+    <ul>
+      <li>UT Austin Teaching Assistant</li>
+      <li>Clear explanations</li>
+      <li>Personalized sessions</li>
+    </ul>
+  </div>
+</section>
 
-  <section class="two-grid">
-    <div class="card">
-      <h3>Local & Online Tutoring</h3>
-      <p>
-        Based in Texas — serving Southlake, Grapevine, Colleyville, Keller, and the surrounding DFW area.
-      </p>
-      <p>
-        Online tutoring is also available for students outside the area.
-      </p>
-    </div>
+<section class="two-grid">
+  <div class="card">
+    <h3>Local & Online Tutoring</h3>
+    <p>Based in Texas — serving Southlake, Grapevine, Colleyville, Keller, and surrounding DFW area.</p>
+  </div>
 
-    <div class="card rate-box">
-      <h3>Rates</h3>
-      <div class="rate">$45</div>
-      <div class="rate-sub">PER HOUR</div>
-      <p>
-        High-quality, personalized tutoring with flexible scheduling.
-      </p>
-    </div>
-  </section>
+  <div class="card rate-box">
+    <h3>Rates</h3>
+    <div class="rate">$45</div>
+    <div class="rate-sub">PER HOUR</div>
+  </div>
+</section>
 
-  <section id="contact" class="card">
-    <h3>Contact</h3>
-    <p>Fill this out and I’ll get back to you soon.</p>
+<section id="contact" class="card">
+  <h3>Contact</h3>
 
-    <form action="https://formspree.io/f/xbdqnkwr" method="POST">
-      <input type="text" name="name" placeholder="Parent/Student Name" required />
+  <form action="https://formspree.io/f/xbdqnkwr" method="POST">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="text" name="grade" placeholder="Student Grade">
+    <input type="text" name="subject" placeholder="Math Subject">
+    
+    <select name="type">
+      <option>In-person or online?</option>
+      <option>In-person</option>
+      <option>Online</option>
+      <option>Either</option>
+    </select>
 
-      <input type="email" name="email" placeholder="Email" required />
+    <textarea name="message" placeholder="Message" required></textarea>
 
-      <input type="text" name="student-grade" placeholder="Student Grade" />
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+</section>
 
-      <input type="text" name="math-subject" placeholder="Math Subject" />
-
-      <select name="session-type">
-        <option value="">In-person or online?</option>
-        <option value="In-person">In-person</option>
-        <option value="Online">Online</option>
-        <option value="Either">Either</option>
-      </select>
-
-      <textarea name="message" placeholder="Message" required></textarea>
-
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-  </section>
-
-</main>
+</div>
 
 <footer>
   © 2026 Patnik Creative
